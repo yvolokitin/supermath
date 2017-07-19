@@ -1,0 +1,1889 @@
+/* workaround for IE to remove link and image borderds */
+a img {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+/* elegant solution to disable page scrolling */
+.disable_page_scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 95px;
+    width: 100%;
+    background: linear-gradient(to bottom, #ffeb99 99%, #ffffff 1%);
+    border-style: none;
+}
+
+.supermath_logo_picture_div {
+    height: 100%;
+    width: 49%;
+    float: left;
+}
+.supermath_logo_picture_div img {
+    height: 113px;
+    padding-top: 1px;
+    cursor: pointer;
+    transition-duration: 1.0s;
+    -webkit-transition-duration: 1.0s;
+}
+.supermath_logo_picture_div:hover img {
+    height: 123px;
+}
+
+.supermath_about_help_enter_div {
+    height: 100%;
+    width: 49%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.supermath_about_help_enter_div img {
+    height: 60%;
+    width: auto;
+    padding-left: 2%;
+    cursor: pointer;
+    float: left;
+}
+
+body {
+    height: 100%;
+    padding-top: 115px;
+    background-color: #739900;
+    background-image: url(../img/tree_left.png), url(../img/tree_right.png);
+    background-position: right bottom, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 30%, 30%;
+    background-attachment: fixed;
+    border-style: none;
+    text-align: center;
+}
+
+.main_window_background_green_desk {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.05;
+}
+
+.main_page_wrapper {
+    height: 1200px;
+    width: 1100px;
+    margin: auto;
+    background-color: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 8px 8px 10px black;
+    -webkit-box-shadow: 8px 8px 10px black;
+    -moz-box-shadow: 8px 8px 10px black;
+}
+.main_page_window_wrapper_footer {
+    height: 20px;
+    width: 96%;
+    margin-top: 5px;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    font-variant: small-caps;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshow_styles {
+    height: 280px;
+    width: 100%;
+    position: relative;
+}
+.slideshow_slide {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+.slideshow_prev, .slideshow_next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    opacity: 0.5;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slideshow_prev:hover, .slideshow_next:hover {
+    opacity: 1.0;
+}
+.slideshow_prev {
+    left: 0;
+}
+.slideshow_next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.slideshow_animation {
+    -webkit-animation-name: slideshow_fade;
+    -webkit-animation-duration: 2.0s;
+    animation-name: slideshow_fade;
+    animation-duration: 2.0s;
+}
+@-webkit-keyframes slideshow_fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes slideshow_fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.sm_topic {
+    height: 160px;
+    width: 48%;
+    margin-top: 10px;
+    border: solid 3px black;
+    border-radius: 5px;
+}
+.sm_topic_1, .sm_topic_5, .sm_topic_6, .sm_topic_7, .sm_topic_8, .sm_topic_9 {
+    float: left;
+    margin-left: 1%;
+}
+.sm_topic_2, .sm_topic_4 {
+    float: right;
+    margin-right: 1%;
+}
+.sm_topic_2 img {
+    height: auto;
+    width: 48%;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: right;
+    cursor: pointer;
+}
+.sm_topic_4 {
+    height: 336px;
+}
+.sm_topic_4_description {
+    height: 50%;
+    width: 96%;
+    margin: 2%;
+    text-align: justify;
+    color: black;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 110%;
+}
+.sm_topic_4_sc {
+    height: 15%;
+    width: 96%;
+    margin: 2%;
+}
+.sm_topic_4_sc_vk {
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sm_topic_4_sc_fb {
+    width: 50%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sm_topic_4_chrome {
+    height: 20%;
+    width: 96%;
+    margin: 2%;
+}
+.sm_topic_4_chrome img {
+    height: 100%;
+    width: auto;
+    float: left;
+    cursor: pointer;
+}
+
+.sm_topic_text_left, .sm_topic_text_right {
+    margin: 2%;
+    text-align: justify;
+    text-decoration: none;
+    color: black;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 110%;
+}
+.sm_topic_text_left {
+    height: 100%;
+    width: 65%;
+    float: left;
+}
+.sm_topic_text_right {
+    height: 100%;
+    width: 65%;
+    float: right;
+}
+
+.sm_topic_9 {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.user_records_table {
+    height: 90%;
+    width: 90%;
+}
+.user_records_table tr {
+    height: 33%;
+    width: 100%;
+}
+.user_records_table td {
+    height: 33%;
+    width: 100%;
+}
+
+.game_banner_img_wrapper_left, .game_banner_img_wrapper_right {
+    height: 100%;
+    width: 30%;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.game_banner_img_wrapper_left {
+    float: left;
+}
+.game_banner_img_wrapper_right {
+    float: right;
+}
+
+.game_banner_img_wrapper_right img, .game_banner_img_wrapper_left img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+.game_banner_img_wrapper_right:hover img, .game_banner_img_wrapper_left:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.sm_topic_registration_word {
+    height: 100%;
+    width: 40%;
+    margin-left: 2%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.sm_topic_registration_word img {
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+.sm_topic_registration_word:hover img {
+    width: 110%;
+}
+
+.sm_topic_ad_left {
+    float: left;
+    margin-left: 1%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.sm_topic_ad_left img {
+    height: 100%;
+    display: block;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*rotating numbers*/
+.sm_topic_numbers_div {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url(../img/supermath_top10.png) no-repeat;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.sm_topic_numbers_div img {
+    height: 100%;
+    -webkit-animation: numbers360rotation 4s linear infinite;
+    -moz-animation: numbers360rotation 4s linear infinite;
+    animation: numbers360rotation 4s linear infinite;
+}
+@-moz-keyframes numbers360rotation { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes numbers360rotation { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes numbers360rotation { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.sm_topic_numbers_table {
+    height: 100%;
+    width: 100%;
+}
+
+.sm_topic_numbers_top3 {
+    height: 100%;
+    width: 100%;
+}
+
+.sm_topic_numbers_top3_topic {
+    width: 32%;
+    height: 99%;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+}
+
+.top10_table_div {
+    width: 70%;
+    height: 50%;
+    margin: auto;
+}
+.top10_table_div table {
+    width: 100%;
+    margin-top: 2%;
+    font-family: arial, sans-serif;
+    border: 3px solid #cc6600;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 8px 8px 10px black;
+    -webkit-box-shadow: 8px 8px 10px black;
+    -moz-box-shadow: 8px 8px 10px black;
+}
+.top10_table_div td, top10_table_div th {
+    border: 1px solid #ffe6cc;
+    padding: 8px;
+}
+.top10_table_div tr:nth-child(even) {
+    background-color: #ffe6cc;
+}
+
+.belts_descriptions_title {
+    height: 10%;
+    width: 96%;
+    margin: 2%;
+    text-align: justify;
+    font-size: 18px;
+}
+.belts_descriptions_div {
+    height: 86%;
+    width: 96%;
+    margin: 2%;
+    text-align: justify;
+    font-size: 18px;
+}
+.belts_descriptions_table {
+    width: 100%;
+    height: 100%;
+    border-spacing: 5px 1px;
+}
+.belts_descriptions_table_tr {
+    height: 10%;
+}
+.belts_descriptions_table_td {
+    height: 10%;
+    width: 15%;
+}
+.belts_descriptions_table_text {
+    height: 10%;
+    width: 85%;
+    margin-left: 2%;
+}
+.belts_descriptions_table_img {
+    height: auto;
+    width: 100%;
+}
+
+.common_text_style {
+    overflow-y: auto;
+    margin: auto;
+
+    padding-top: 10px;
+
+    text-align: justify;
+    text-decoration: none;
+    color: black;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+}
+.about_us_text_style {
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 18px;
+}
+
+.registration_img_div {
+    height: 27%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration_img_div img {
+    height: 100%;
+}
+.registration_img_div p {
+    margin: 5%;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.registration_img_text_div {
+    height: 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration_img_text_div img {
+    height: 100%;
+}
+
+.registration_forms_style {
+    height: 3em;
+    width: 220px;
+    margin-top: 10px;
+    font-family: "Lucida Console", Monospace;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.registration_forms_style_email {
+    width: 450px;
+}
+.registration_recaptcha_styles {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activation_user_name_text {
+    padding: 2% 2% 2% 2%;
+
+    text-align: justify;
+    text-decoration: none;
+
+    color: black;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+}
+.activation_common_text {
+    padding-left: 2%;
+    padding-right: 2%;
+
+    text-align: left;
+    text-decoration: none;
+
+    color: black;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+}
+.activation_form_style {
+    width: 450px;
+}
+
+.login_div_img_style {
+    height: 50%;
+    width: 49%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_div_img_style img {
+    height: 80%;
+}
+
+@-moz-keyframes login_numbers { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes login_numbers { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes login_numbers { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.login_div_form_style, .login_remind_pswd_div_style {
+    height: 50%;
+    width: 50%;
+    float: right;
+}
+.login_forms_style {
+    height: 3em;
+    width: 70%;
+    margin-top: 2%;
+    margin-left: 4%;
+    float: left;
+
+    font-family: "Lucida Console", Monospace;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.login_remind_pswd_div_style p {
+    margin-right: 4%;
+}
+
+.login_enter_div {
+    height: 25%;
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_enter_div img {
+    height: 70%;
+    cursor: pointer;
+}
+
+.login_div_messages {
+    height: 30%;
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.login_div_messages p {
+    margin: 5%;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: justify;
+}
+.login_div_img_text_style img {
+    height: 30%;
+}
+
+.login_div_fb {
+    height: 100%;
+    width: 49%;
+    float: left;
+}
+.login_div_vk {
+    height: 100%;
+    width: 49%;
+    float: right;
+}
+
+.login_registration_div {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_registration_div img {
+    height: 50%;
+    transition-duration: 1.0s;
+    -webkit-transition-duration: 1.0s;
+}
+.login_registration_div:hover img {
+    height: 60%;
+    cursor: pointer;
+}
+
+.window_common_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+.window_common_wrapper:target {
+    display: block;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+}
+
+.settings_element_div {
+    height: 210px;
+    width: 98%;
+    margin: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.settings_element_text {
+    font-family: "Lucida Console", Monospace;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+}
+
+
+.welcome_user_common_div {
+    height: 210px;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.welcome_user_picture_div {
+    position: relative;
+    height: 100%;
+    width: 22%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+.welcome_user_picture_div img {
+    display: block;
+    height: 100%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.welcome_user_picture_overlay {
+    position: absolute;
+    bottom: 0;
+    background-color: grey;
+    overflow: hidden;
+    width: 90%;
+    height: 0;
+    transition: 1.0s ease;
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 0.7;
+}
+.welcome_user_picture_div:hover .welcome_user_picture_overlay {
+    height: 40%;
+}
+.welcome_user_picture_text {
+    white-space: nowrap; 
+    color: white;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.welcome_current_program_div {
+    height: 100%;
+    width: 22%;
+    float: left;
+}
+.welcome_current_program_div img {
+    height: 100%;
+    width: auto;
+    float: left;
+    cursor: pointer;
+}
+.welcome_current_program_description {
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+.welcome_current_program_description img {
+    height: 20%;
+    cursor: pointer;
+    transition-duration: 1.0s;
+    -webkit-transition-duration: 1.0s;
+}
+.welcome_current_program_description:hover img {
+    height: 30%;
+}
+.welcome_program_desc_style {
+    height: 65%;
+    width: 100%;
+    overflow-y: auto;
+    color: black;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.welcome_user_div_separator {
+    height: 4%;
+    width: 100%;
+}
+.welcome_user_div_user_name {
+    height: 100%;
+    width: 22%;
+    float: left;
+    font-family: "Arial";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    font-variant: small-caps;
+    text-align: center;
+}
+.welcome_user_select_pgrm_word_div {
+    height: 100%;
+    width: 77%;
+    float: right;
+}
+.welcome_user_select_pgrm_word_div img {
+    height: 100%;
+    width: auto;
+}
+
+.welcome_wrapper {
+    height: 70%;
+    width: 100%;
+}
+
+.welcome_belt_div {
+    height: 95%;
+    width: 22%;
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+.welcome_belt_img {
+    width: 75%;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+.welcome_belt_tooltip {
+    display: none;
+    height: 600px;
+    width: 550px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    border: 3px solid black;
+}
+.welcome_belt_tooltip p {
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.welcome_belt_tooltip img {
+    width: 160px;
+    padding-right: 2%;
+    cursor: pointer;
+}
+
+.welcome_user_name_style {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 0.5em;
+}
+
+.welcome_user_stars_div {
+    height: 10%;
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome_user_stars_div img {
+    height: 100%;
+    cursor: pointer;
+}
+.welcome_user_stars_div p {
+    color: black;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.welcome_programs_selector_div {
+    height: 90%;
+    width: 75%;
+    float: left;
+}
+.welcome_programs_selector_table {
+    height: auto;
+    width: 100%;
+}
+.welcome_programs_selector_table td {
+    height: 195px;
+    width: 195px;
+}
+.welcome_programs_selector_table img {
+    height: 90%;
+    width: 90%;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    border-radius: 5px;
+    border: 4px solid black;
+}
+
+.welcome_logout {
+    height: 10%;
+    width: 75%;
+    float: right;
+}
+.welcome_logout img {
+    height: 100%;
+    width: auto;
+    padding-right: 2%;
+    cursor: pointer;
+}
+
+.whiteboard_container {
+    display: inline-block;
+    height: 620px;
+    width: 1100px;
+    margin: auto;
+    margin-top: 4%;
+    background-color: white;
+    text-align: center;
+    font-family: "Lucida Console", Monospace;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    -webkit-animation: fade .8s;
+    -moz-animation: fade .8s;
+    animation: fade .8s;
+}
+@-moz-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+}
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 } 
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+}
+
+.whiteboard_container_processing {
+    height: 300px;
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.whiteboard_container_about_us {
+    height: 700px;
+}
+.whiteboard_container_help {
+    height: 1000px;
+    margin-top: 1%;
+}
+.whiteboard_container_help p {
+    text-align: center;
+}
+.whiteboard_container_belts {
+    height: 850px;
+    margin-top: 1%;
+}
+
+.help_faq ul, li { list-style: none; }
+.help_faq li {
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: normal;
+    text-align: left;
+}
+.help_faq li.question {
+    font-weight: bold;
+    cursor: pointer;
+}
+.help_faq li.answer {
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-bottom: 2%;
+    display: none;
+    color: black;
+}
+.help_rotate {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.whiteboard_container_contacts {
+    height: 700px;
+}
+
+.stars_wrapper {
+    height: 6%;
+    width: 100%;
+}
+.statistics_div {
+    height: 90%;
+    width: 22%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Console', Monospace;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 22px;
+}
+.stars_div {
+    display: none;
+    height: 100%;
+    width: 30%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stars_div img {
+    height: 100%;
+}
+.stars_div text {
+    height: 100%;
+    margin-left: 5px;
+    float: right;
+    color: #ff9900;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Lucida Console', Monospace;
+    font-style: normal;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.game_hero_div {
+    height: 75%;
+    width: 22%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game_hero_div img {
+    width: 80%;
+}
+.game_icons_div {
+    height: 15%;
+    width: 22%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid grey;
+}
+.game_icons_div img {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid 3px grey;
+}
+
+.playground {
+    height: 75%;
+    width: 77%;
+    float: right;
+}
+.mo_task_board {
+    height: 100%;
+    width: 60%;
+    float: left;
+    text-align: right;
+    text-decoration: none;
+    font-size: 6em;
+}
+.co_task_board_wrapper {
+    height: 35%;
+    width: 100%;
+    float: left;
+}
+.co_task_board {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+.co_task_board text {
+    /*width: 30%;*/
+    width: auto;
+    text-decoration: none;
+}
+
+.mo_task {
+    width: 100%;
+    height: 22%;
+    float: left;
+}
+.mo_black_line {
+    width: 55%;
+    height: 2%;
+    float: right;
+    background: black;
+    border-radius: 3px;
+}
+.mo_correct_result_div {
+    height: 100%;
+    width: 6%;
+    float: left;
+}
+.mo_correct_result_div_half {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: line-through;
+    font-size: 3em;
+    color: red;
+}
+.co_correct_result_div {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.co_correct_result_div p {
+    display: none;
+    position: absolute;
+    text-align: left;
+}
+.mo_correct_result_div img, .co_correct_result_div img {
+    display: none;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+}
+.co_keys_div {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.co_keys_wrapper {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.co_keys_wrapper img {
+    height: 50%;
+    width: auto;
+    cursor: pointer;
+}
+/*.less_img {
+    height: 60%;
+    width: 10%;
+    cursor: pointer;
+}
+.equl_img {
+    height: 45%;
+    width: 10%;
+    cursor: pointer;
+    margin-left: 10%;
+}
+.more_img {
+    height: 60%;
+    width: 10%;
+    cursor: pointer;
+    margin-left: 10%;
+}
+.less_img:active, .equl_img:active, .more_img:active {
+    background: grey;
+    border: 5px solid grey;
+}*/
+
+.circles_wrapper {
+    height: 15%;
+    width: 77%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid grey;
+}
+.circles_wrapper img {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.operations_wrapper img {
+    height: 90%;
+    cursor: pointer;
+    margin-right: 10%;
+}
+.operations_wrapper:active img {
+    background: grey;
+    border: 5px solid grey;
+}
+
+.keyboard_wrapper {
+    height: 100%;
+    width: 30%;
+    float: right;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.keybord_keys_wrapper {
+    height: 250px;
+    width: 210px;
+}
+.keybord_key_div {
+    height: 55px;
+    width: 55px;
+    float: left;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+.keybord_key_div img {
+    height: 100%;
+    width: 100%;
+    background: white;
+    cursor: pointer;
+}
+.keybord_key_div:hover img {
+    border: 3px solid grey;
+}
+.keybord_key_div:active img {
+    border: 3px solid black;
+}
+
+.res_div_msg, .res_div {
+    height: 90%;
+    display: none;
+}
+.res_div_msg {
+    width: 90%;
+    margin: 5%;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+}
+.res_div {
+    width: 100%;
+    font-family: "Lucida Console", Monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: justify;
+}
+.res_div_left, .res_div_right {
+    height: 85%;
+    width: 48%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.res_div_left {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-left: 1%;
+    float: left;
+}
+.res_div_left table {
+    width: 90%;
+    margin: auto;
+    font-family: arial, sans-serif;
+    border: 3px solid black;
+}
+.res_div_text_style {
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.res_div_image_style {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.res_div_image_style img {
+    height: 80%;
+    width: auto;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.res_div_right {
+    margin-right: 1%;
+    float: right;
+}
+.res_div_right div {
+    height: 25%;
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.res_div_btns {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 3px solid grey;
+}
+.res_div_btns img {
+    height: 70%;
+    width: auto;
+    cursor: pointer;
+}
+
+.close_window_div {
+    height: 25px;
+    width: 100%;
+}
+.close_window_div img {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    float: right;
+}
+
+.close_window {
+    z-index: 9999;
+    float: right;
+    width: 25px;
+    height: 25px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    line-height: 26px;
+    cursor: pointer;
+}
+.close_window:hover:after {
+    border-color: #fff;
+    color: #fff;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+@media only screen and (max-width: 1150px) {
+    .main_page_wrapper {
+        width: 98%;
+    }
+    .main_window_background_green_desk {
+        display: none;
+    }
+    .whiteboard_container {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        background: none;
+        background-color: #ffeb99;
+    }
+    .supermath_logo_picture_div img {
+        height: 110%;
+        width: auto;
+        padding-top: 1px;
+        transition-duration: none;
+        -webkit-transition-duration: none;
+    }
+    .supermath_logo_picture_div:hover img {
+        height: 110%;
+        width: auto;
+    }
+    .supermath_about_help_enter_div {
+        justify-content: flex-end;
+    }
+    .supermath_about_help_enter_div img {
+        padding-left: 0;
+        padding-right: 1%;
+    }
+
+    body {
+        padding-top: 95px;
+        background-image: none;
+    }
+    .main_page_wrapper {
+        height: 1150px;
+    }
+
+    .slideshow_styles {
+        height: 250px;
+    }
+
+    .sm_topic_text_left, .sm_topic_text_right {
+        width: 63%;
+        line-height: 100%;
+    }
+    .game_banner_img_wrapper_left, .game_banner_img_wrapper_right {
+        width: 33%;
+    }
+    .sm_topic_ad_left img {
+        width: 100%;
+        display: block;
+        -webkit-transform: none;
+        transform: none;
+    }
+    .sm_topic_4_description {
+        line-height: 100%;
+    }
+    .sm_topic_4_sc {
+        height: 15%;
+        width: 96%;
+        margin: 2%;
+    }
+    .sm_topic_4_sc_vk {
+        width: 40%;
+    }
+    .sm_topic_4_sc_fb {
+        width: 60%;
+    }
+
+    .welcome_user_common_div {
+        height: 180px;
+    }
+    .welcome_user_picture_div {
+        width: 20%;
+        padding-right: 1%;
+    }
+    .welcome_user_picture_div img {
+        height: 100%;
+        width: 100%;
+    }
+    .welcome_current_program_div {
+        width: 20%;
+    }
+    .welcome_current_program_div img {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .welcome_current_program_description {
+        width: 57%;
+    }
+    .welcome_program_desc_style {
+        width: 98%;
+        font-size: 16px;
+    }
+    .welcome_user_div_separator {
+        height: 3%;
+    }
+
+    .welcome_wrapper {
+        margin-top: 1%;
+    }
+    .welcome_belt_div {
+        width: 20%;
+        padding-right: 1%;
+    }
+    .welcome_programs_selector_div {
+        width: 78%;
+    }
+    .welcome_programs_selector_table td {
+        height: 180px;
+        width: 180px;
+    }
+
+    .welcome_user_stars_div {
+        margin-top: 5%;
+    }
+    .welcome_user_stars_div img {
+        height: 80%;
+    }
+    .welcome_user_stars_div p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .supermath_about_help_enter_div img {
+        height: 50%;
+        padding-left: 0;
+        padding-right: 2%;
+    }
+
+    .main_page_wrapper {
+        height: 900px;
+    }
+
+    .slideshow_styles {
+        height: 230px;
+    }
+    .sm_topic, .sm_topic_4 {
+        height: 150px;
+        margin-top: 5px;
+    }
+    .sm_topic_4_sc, .sm_topic_4_chrome, .sm_topic_ad_left {
+        display: none;
+    }
+    .sm_topic_2 img {
+        height: 105%;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .sm_topic_registration_word {
+        height: 100%;
+        width: 40%;
+        margin-left: 1%;
+    }
+    .sm_topic_registration_word img {
+        height: auto;
+        width: 100%;
+        transition-duration: none;
+        -webkit-transition-duration: none;
+    }
+    .sm_topic_registration_word:hover img {
+        height: auto;
+        width: 100%;
+    }
+    .sm_topic_text_left, .sm_topic_text_right {
+        margin: 1%;
+        width: 65%;
+        overflow: hidden;
+    }
+    .sm_topic_4_description {
+        height: 100%;
+        width: 98%;
+        margin: 1%;
+        overflow: hidden;
+    }
+
+    .welcome_user_common_div {
+        height: 170px;
+        margin-top: 5px;
+    }
+    .welcome_programs_selector_table td {
+        height: 170px;
+        width: 170px;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    header {
+        height: 90px;
+    }
+    body {
+        padding-top: 90px;
+    }
+
+    .main_page_wrapper {
+        height: 800px;
+    }
+
+    .slideshow_styles {
+        height: 210px;
+    }
+    .sm_topic, .sm_topic_4 {
+        height: 130px;
+    }
+    .sm_topic_2 img {
+        height: 100%;
+        width: auto;
+    }
+    .sm_topic_registration_word {
+        height: 100%;
+        width: 40%;
+        margin-left: 1%;
+    }
+    .sm_topic_registration_word img {
+        height: auto;
+        width: 100%;
+        transition-duration: none;
+        -webkit-transition-duration: none;
+    }
+    .sm_topic_registration_word:hover img {
+        height: auto;
+        width: 100%;
+    }
+    .sm_topic_text_left, .sm_topic_text_right {
+        font-size: 14px;
+    }
+    .sm_topic_4_description {
+        font-size: 14px;
+    }
+
+    .common_text_style {
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .welcome_user_common_div {
+        height: 160px;
+        margin-top: 3px;
+    }
+    .welcome_user_picture_div img {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .welcome_current_program_div img {
+        width: 100%;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .welcome_current_program_description {
+        margin-right: 3px;
+        float: right;
+    }
+    .welcome_program_desc_style {
+        width: 100%;
+        font-size: 14px;
+    }
+    .welcome_belt_img {
+        width: 90%;
+        transition-duration: 0s;
+        -webkit-transition-duration: 0s;
+    }
+    .welcome_programs_selector_table td {
+        height: 150px;
+        width: 150px;
+    }
+    .welcome_user_div_separator {
+        display: none;
+    }
+
+    .close_window_div_help {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    header {
+        height: 80px;
+    }
+    body {
+        padding-top: 80px;
+    }
+    .supermath_about_help_enter_div img {
+        height: 50%;
+        padding-right: 2%;
+    }
+
+    .star_img_style {
+        height: 100%;
+        float: left;
+        padding-left: 5%;
+    }
+
+    .narrows_wrapper, .operations_wrapper {
+        height: 35%;
+    }
+
+    .statistics_div {
+        height: 95%;
+        width: 23%;
+        float: left;
+        margin-left: 1%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header {
+        height: 70px;
+    }
+    .supermath_logo_picture_div {
+        width: 35%;
+        padding-left: 5%;
+        display: flex;
+        justify-content: center;
+    }
+    .supermath_logo_picture_div img {
+        height: 110%;
+        width: auto;
+    }
+    .supermath_logo_picture_div:hover img {
+        height: 110%;
+        width: auto;
+    }
+    .supermath_about_help_enter_div {
+        width: 50%;
+    }
+    .supermath_about_help_enter_div img {
+        height: 70%;
+        padding-right: 2%;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+    .main_page_wrapper {
+        height: 700px;
+    }
+    .slideshow_styles {
+        height: 180px;
+    }
+    .sm_topic, .sm_topic_4 {
+        height: 110px;
+    }
+    .sm_topic_text_left, .sm_topic_text_right {
+        font-size: 12px;
+    }
+    .sm_topic_4_description {
+        font-size: 12px;
+    }
+
+    .game_hero_div, .game_icons_div {
+        display: none;
+    }
+    .playground, .circles_wrapper {
+        width: 100%;
+    }
+
+    .statistics_div {
+        height: 95%;
+        width: 49%;
+        margin-left: 1%;
+    }
+    .stars_div {
+        height: 100%;
+        width: 49%;
+        margin-right: 1%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .supermath_logo_picture_div {
+        width: 35%;
+        padding-left: 5%;
+        display: flex;
+        justify-content: center;
+    }
+    .supermath_logo_picture_div img {
+        height: auto;
+        width: 100%;
+    }
+    .supermath_logo_picture_div:hover img {
+        height: auto;
+        width: 100%;
+    }
+    .supermath_about_help_enter_div {
+        width: 60%;
+    }
+    .supermath_about_help_enter_div img {
+        height: 70%;
+        padding-right: 2%;
+    }
+
+    .main_page_wrapper {
+        height: 1420px;
+    }
+    .slideshow_styles {
+        display: none;
+    }
+    .sm_topic, .sm_topic_1, .sm_topic_2, .sm_topic_4, .sm_topic_5, .sm_topic_6, .sm_topic_7, .sm_topic_8, .sm_topic_9 {
+        height: 160px;
+        width: 97%;
+        margin-top: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
+        float: none;
+    }
+    .sm_topic_2 img {
+        height: 105%;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .sm_topic_registration_word {
+        height: 100%;
+        width: 55%;
+    }
+    .sm_topic_registration_word img {
+        height: auto;
+        width: 100%;
+    }
+    .sm_topic_registration_word:hover img {
+        height: auto;
+        width: 100%;
+    }
+    .sm_topic_ad_left, .sm_topic_4_sc {
+        display: none;
+    }
+    .sm_topic_4_description {
+        height: 80%;
+        width: 96%;
+        margin: 2%;
+        font-size: 18px;
+        line-height: 100%;
+    }
+    .sm_topic_text_left, .sm_topic_text_right {
+        height: 80%;
+        width: 68%;
+        margin: 2%;
+        line-height: 110%;
+        font-size: 18px;
+    }
+    .game_banner_img_wrapper_left, .game_banner_img_wrapper_right {
+        height: 100%;
+        width: 26%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    header {
+        height: 120px;
+    }
+    .supermath_logo_picture_div {
+        height: 60%;
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .supermath_logo_picture_div img {
+        height: 100%;
+        width: auto;
+    }
+    .supermath_logo_picture_div:hover img {
+        height: 100%;
+        width: auto;
+    }
+    .supermath_about_help_enter_div {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .supermath_about_help_enter_div img {
+        height: 95%;
+        padding-right: 0%;
+    }
+
+    body {
+        padding-top: 115px;
+    }
+
+    .sm_topic_registration_word {
+        width: 50%;
+    }
+    .sm_topic_4_description {
+        font-size: 16px;
+    }
+    .sm_topic_text_left, .sm_topic_text_right {
+        line-height: 100%;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sm_topic_registration_word {
+        width: 40%;
+    }
+}
+
+
+
+@media only screen and (max-height: 800px) {
+    .whiteboard_container {
+        height: 98%;
+        margin: 1%;
+    }
+}
+@media only screen and (max-height: 700px) {
+    .mo_task_empty {
+        display: none;
+    }
+}
+@media only screen and (max-height: 600px) {
+    .mo_task_board {
+        font-size: 5em;
+    }
+}
+@media only screen and (max-height: 500px) {
+    .mo_task_board {
+        font-size: 4em;
+    }
+}
+@media only screen and (max-height: 300px) {
+    .mo_task_board {
+        font-size: 3em;
+    }
+}

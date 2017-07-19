@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2016 SuperMath.RU All rights reserved.
+    supermath.ru, supermath.co
+
+-->
+<head>
+    <html lang="en">
+    <title>SuperMath - Математика, обучение сложению, вычитанию, умножению и делению</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="supermath.ru - математика, обучение математике, сложению, вычитанию, умножению и делению">
+    <meta name="keywords" content="математика, обучение, сложение, вычитание, умножение, деление, арифметика, цифры, числа, math, mathimatics, education, addition, substruction"/>
+    <meta name="author" content="Yura Volokitin (yuri.volokitin@gmail.com)">
+    <meta name="title" content="SuperMath — Математика, обучение"/>
+    <!-- for Bootstrap proper rendering and touch zooming-->
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/mpceafdmcbkmegjfcfnkkpbogpgbpfdh">
+
+    <!-- open graph for social networks -->
+    <meta property="og:title" content="SuperMath - Математика, обучение"/>
+    <meta property="og:description" content="SuperMath - Математика, обучение сложению, вычитанию, умножению и делению на сайте supermath.ru."/>
+    <meta property="og:url" content="http://supermath.ru"/>
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="SuperMath"/>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://supermath.ru/icons/social-icon_3.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="578"/>
+
+    <!-- twitter -->
+    <meta name="twitter:title" content="SuperMath - Математика, обучение">
+    <meta name="twitter:description" content="SuperMath - Математика, обучение сложению, вычитанию, умножению и делению на сайте supermath.ru.">
+    <meta name="twitter:image:src" content="http://supermath.ru/icons/social-icon_3.png">
+    <meta name="twitter:url" content="http://supermath.ru">
+    <meta name="twitter:domain" content="supermath.ru">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@supermath">
+    <meta name="twitter:creator" content="@volokitin">
+
+    <!--  разрешаем индексировать текст и ссылки на странице -->
+    <meta name="robots" content="all"/>
+
+    <!-- hreflang для языка и регионального URL, пока в процессе -->
+    <link rel="alternate" hreflang="x-default" href="http://supermath.ru/" />
+    <link rel="alternate" hreflang="ru" href="http://supermath.ru/" />
+
+    <!-- facebook app id -->
+    <meta property="fb:app_id" content="369402196755325"/>
+
+    <!-- yandex -->
+    <meta name="yandex-verification" content="e9e53084accbcdc4" />
+    <!-- mail.ru -->
+    <meta name='wmail-verification' content='1d390ef1d6473873cb1c50df3f059c4d' />
+
+    <!-- for ie11 and edge -->
+    <meta name="msapplication-config" content="browserconfig.xml"/>
+
+    <!--<meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="http://supermath.ru/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="http://supermath.ru/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://supermath.ru/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://supermath.ru/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://supermath.ru/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://supermath.ru/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://supermath.ru/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://supermath.ru/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://supermath.ru/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="http://supermath.ru/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="http://supermath.ru/icons/icon-128x128.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://supermath.ru/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="http://supermath.ru/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://supermath.ru/icons/favicon-16x16.png">
+    <link rel="manifest" href="http://supermath.ru/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="http://supermath.ru/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- мои стили для главной страницы -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-88575302-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script>if(typeof(Storage)!=="undefined"){language=localStorage.getItem('user_language');}
+        if(!language){if((navigator.language||navigator.browserLanguage)==='ru'){language='ru';}else{language='en';}}</script>
+</head>
+
+<header>
+  <div class="supermath_logo_picture_div">
+    <img id="header_logo_id" src="img/sm_logo.png" onclick="location.reload(true);" alt="SuperMath Logo"/>
+  </div>
+
+  <div class="supermath_about_help_enter_div">
+    <img id="header_aboutus_id" src="" onclick="show_about_us()"/>
+    <img id="header_help_id" src="" onclick="click_window('link_help');"/>
+    <img id="header_login_id" src=""/>
+  </div>
+</header>
+
+<body onLoad="JavaScript:refresh_data();">
+  <script>page_header_images();</script>
+
+  <!-- бекграунд формулы -->
+  <img class="main_window_background_green_desk" src="img/bckg_formula.gif"/>
+
+  <!-- Главная страница с описанием игры, ссылками на социальные сети т.д. -->
+  <div id="main_page" class="main_page_wrapper" style="display:none;">
+    <div class="slideshow_styles">
+        <div class="slideshow_slide slideshow_animation">
+          <img src="img/carousel_image.jpg" style="height:100%;width:100%;">
+        </div>
+
+        <div class="slideshow_slide slideshow_animation">
+          <img src="img/carousel_image.jpg" style="height:100%;width:100%;">
+        </div>
+
+        <img class="slideshow_prev" src="img/slider_left.png" onclick="next_slide(-1)">
+        <img class="slideshow_next" src="img/slider_right.png" onclick="next_slide(1)">
+    </div>
+    <script>var current_slide = 1;show_slide(current_slide);</script>
+
+    <div id="user_records_topic_id" class="sm_topic sm_topic_9">
+      <div id="sm_topic_numbers_div_id" class="sm_topic_numbers_div" style="cursor:pointer;">
+        <!-- supermath_top10.png -->
+        <img src="img/numbers_2.png"/>
+      </div>
+
+      <div id="sm_topic_numbers_top3_id" class="sm_topic_numbers_top3" style="display:none;">
+        <a href="#top10" onclick="get_top_10();">
+          <div id="sm_topic_numbers_top3_id2" class="sm_topic_numbers_top3_topic">
+            <div id="place_number_2_stars" style="width:100%;height:10%;"></div>
+            <img style="height:59%;width:auto;" src="img/top_1.png">
+            <div id="place_number_2_name" style="width:100%;height:30%;"></div>
+          </div>
+          <div id="sm_topic_numbers_top3_id1" class="sm_topic_numbers_top3_topic">
+            <div id="place_number_1_stars" style="width:100%;height:10%;font-size:20px;"></div>
+            <img style="height:59%;width:auto;" src="img/top_2.png">
+            <div id="place_number_1_name" style="width:100%;height:30%;font-size:20px;"></div>
+          </div>
+          <div id="sm_topic_numbers_top3_id3" class="sm_topic_numbers_top3_topic">
+            <div id="place_number_3_stars" style="width:100%;height:10%;"></div>
+            <img style="height:59%;width:auto;" src="img/top_3.png">
+            <div id="place_number_3_name" style="width:100%;height:30%;"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- topic 2, registration -->
+    <div class="sm_topic sm_topic_2">
+      <div class="sm_topic_registration_word">
+        <img id="sm_topic_registration_id" src="" onclick="show_registration()"/>
+      </div>
+      <img id="sm_topic_registration_pictire_id" src="img/registration.png" onclick="show_registration()"/>
+    </div>
+
+    <!-- topic 3, advertising -->
+    <div class="sm_topic sm_topic_ad_left">
+      <img src="img/banner_pr.png" onclick="open_url_in_new_tab('samsung');"/>
+    </div>
+
+    <!-- topic 4, description & socials -->
+    <div class="sm_topic sm_topic_4">
+      <div id="sm_topic_4_description_id" class="sm_topic_4_description"></div>
+
+      <div class="sm_topic_4_sc">
+        <!-- Put this script tag to the <head> of your page -->
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?144"></script>
+        <script type="text/javascript">VK.init({apiId: 5821796, onlyWidgets: true});</script>
+        <!-- Put this div tag to the place, where the Like block will be -->
+        <div id="vk_like" class="sm_topic_4_sc_vk"></div>
+        <script type="text/javascript">VK.Widgets.Like("vk_like", {type: "button", height: 30});</script>
+
+        <!-- Facebook Like and Share buttons -->
+        <!-- Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <!-- Load Facebook SDK for JavaScript -->
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            if (language === 'ru') {js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=369402196755325";
+            } else {js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=369402196755325";}
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <div id="fb_like_id" class="fb-like sm_topic_4_sc_fb" data-href="http://supermath.ru/"
+             data-width="25" data-layout="button_count"
+             data-action="recommend" data-size="large"
+             data-show-faces="true" data-share="true">
+        </div>
+      </div>
+
+      <div class="sm_topic_4_chrome">
+        <img src="img/ChromeWebStore_BadgeWBorder_v2_206x58.png" onclick="open_url_in_new_tab('chrome');"/>
+      </div>
+
+    </div>
+
+    <div class="sm_topic sm_topic_5">
+      <div id="sm_topic_5_text_id" class="sm_topic_text_left"></div>
+      <div class="game_banner_img_wrapper_right">
+        <img id="banner_2_img" src="" onclick="run_game(TYPE_MO, '+-', '1,1', 'result', 10, 'test');"/>
+      </div>
+    </div>
+
+    <div class="sm_topic sm_topic_6">
+      <div class="game_banner_img_wrapper_left">
+        <img id="banner_3_img" src="" onclick="run_game(TYPE_MO, '+-', '2,2', 'result', 10, 'test');"/>
+      </div>
+      <div id="sm_topic_6_text_id" class="sm_topic_text_right"></div>
+    </div>
+
+    <div class="sm_topic sm_topic_7">
+      <div class="game_banner_img_wrapper_left">
+        <img id="banner_4_img" src="" onclick="run_game(TYPE_MO, '*', '1,1', 'result', 10, 'test');"/>
+      </div>
+      <div id="sm_topic_7_text_id" class="sm_topic_text_right"></div>
+    </div>
+
+    <div class="sm_topic sm_topic_8">
+      <div id="sm_topic_8_text_id" class="sm_topic_text_left"></div>
+      <div class="game_banner_img_wrapper_right">
+        <img id="banner_5_img" src="" onclick="run_game(TYPE_MO, '+-', '-2,-2', 'result', 10, 'test');"/>
+      </div>
+    </div>
+
+    <div class="sm_topic sm_topic_1">
+      <div id="sm_topic_1_text_id" class="sm_topic_text_left"></div>
+      <div class="game_banner_img_wrapper_right">
+        <img id="banner_1_img" src="" onclick="run_game(TYPE_CO, '<=>', '1,1', 'result', 10, 'test');"/>
+      </div>
+    </div>
+
+    <div class="main_page_window_wrapper_footer">
+      <p style="margin-left:20px;font:black;"><a id="footer_contacts_id" href="#contacts" onclick="click_window('link_contacts');"></a></p>
+      <p style="margin-left:20px;font:black;"><a id="footer_aboutus_id" href="#about_us" onclick="click_window('link_about_us');"></a></p>
+      <!-- <p style="margin-left:20px;font:black;">Соглашение с пользователем</p> -->
+      <!-- <p style="margin-left:20px;font:black;">Родителям</p> -->
+      <p style="margin-left:20px;font:black;"><a id="footer_advertisement_id" href="#advertisement" onclick="click_window('link_advertisement');"></a></p>
+      <p style="margin-left:20px;font:black;">Copyright © SuperMath.ru</p>
+      <p style="margin-left:20px;font:black;"><a id="footer_language_id"  href="#language" onclick="change_language();"></a></p>
+    </div>
+  </div>
+
+  <!-- 111 -->
+  <div id="welcome" class="main_page_wrapper" style="display:none;">
+    <div id="welcome_user_div_id" class="welcome_user_common_div">
+      <!-- аватарка пользователя -->
+      <div class="welcome_user_picture_div">
+        <img id="welcome_user_picture_img_id" src="avatars/user_logo.jpg"
+             onclick="show_user_settings()" alt="User avatar"/>
+        <div class="welcome_user_picture_overlay">
+          <div id="welcome_user_picture_text_id" class="welcome_user_picture_text"
+               onclick="show_user_settings()">
+          </div>
+        </div>
+      </div>
+      <!-- иконка текущей выбранной программы -->
+      <div class="welcome_current_program_div">
+        <img id="welcome_current_program_img" src="img/pgrm_no.png"
+             onclick="run_user_game();"  alt="User program"/>
+      </div>
+      <!-- описание программы пользователя -->
+      <div class="welcome_current_program_description">
+        <div id="welcome_program_desc_id" class="welcome_program_desc_style"></div>
+        <img id="welcome_play_button_id" src="" onclick="run_user_game()"/>
+      </div>
+    </div>
+
+    <div id="welcome_user_div_separator_id" class="welcome_user_div_separator">
+      <!-- имя пользователя -->
+      <div id="welcome_user_name_id" class="welcome_user_div_user_name"></div>
+      <!-- картинка-заголовок: выберите программу -->
+      <div class="welcome_user_select_pgrm_word_div">
+        <img id="select_program_word_img" src="" alt="select program word"/>
+      </div>
+    </div>
+
+    <div id="welcome_wrapper_id" class="welcome_wrapper">
+      <div class="welcome_belt_div">
+        <img id="welcome_user_belt_id" class="welcome_belt_img" alt=""
+             src="img/white.png" onclick="show_hide_belt_selector()"/>
+        <span id="welcome_belt_tooltiptext_id" class="welcome_belt_tooltip">
+          <p><img src="img/white.png" onclick="select_user_belt('white');"/><text id="tooltip_txt_white"></text></p>
+          <p><img src="img/orange.png" onclick="select_user_belt('orange');"/><text id="tooltip_txt_orange"></text></p>
+          <p><img src="img/blue.png" onclick="select_user_belt('blue');"/><text id="tooltip_txt_blue"></text></p>
+          <p><img src="img/yellow.png" onclick="select_user_belt('yellow');"/><text id="tooltip_txt_yellow"></text></p>
+          <p><img src="img/green.png" onclick="select_user_belt('green');"/><text id="tooltip_txt_green"></text></p>
+          <p><img src="img/brown.png" onclick="select_user_belt('brown');"/><text id="tooltip_txt_brown"></text></p>
+          <p><img src="img/black.png" onclick="select_user_belt('black');"/><text id="tooltip_txt_black"></text></p>
+          <p style='text-align:center;'><a id='tooltip_belts_details' href="#belts_descriptions" onclick='show_belts_description()'></a></p>
+        </span>
+
+        <!-- звезды -->
+        <div class="welcome_user_stars_div">
+          <img src="img/star.png" onclick="sync_user_stars_and_show_top_10();"/>
+          <p id="welcome_user_stars_counter_id"></p>
+        </div>
+      </div>
+
+      <div id="welcome_programs_div_id" class="welcome_programs_selector_div">
+        <table id="welcome_programs_table_id" class="welcome_programs_selector_table"></table>
+      </div>
+    </div>
+  </div>
+
+  <script>if(get_local_user_info()){show_user_cabinet();$("#welcome").slideDown(800);}else{set_main_page_elements();$("#main_page").slideDown(800);}</script>
+
+  <!-- 222 -->
+  <div id="settings" class="main_page_wrapper" style="display:none;">
+    <div class="settings_element_div">
+      <div style="height:100%;width:210px;float:left;">
+        <img id="settings_element_avatar_img" style="height:98%;width:98%;margin:1%;"/>
+      </div>
+        <!--<input id="settings_element_avatar_type" type="file" onchange="file_upload()">-->
+
+      <div class="settings_element_text">Раздел в разработке (нажмите на логотип SuperMath для выхода) / Chapter is under development (type by SuperMath logo to exit)</div>
+      <input id="settings_name" type="name" size="64"
+             class="registration_forms_style" disabled required/>
+      <input id="settings_surname" type="name" size="64"
+             class="registration_forms_style" disabled required/>
+      <input id="settings_email" type="email" size="128"
+             class="registration_forms_style registration_forms_style_email" disabled required/>
+      <!--<input id="new_user_password" type="password" size="35"
+             class="registration_forms_style" required/>
+      <input id="new_user_password_confirm" type="password" size="35"
+             class="registration_forms_style"required/>-->
+    </div>
+
+    <div class="settings_element_div">
+    </div>
+
+    <div class="settings_element_div">
+    </div>
+  </div>
+
+  <!--  -->
+  <div id="about_us" class="window_common_wrapper">
+    <div class="whiteboard_container whiteboard_container_about_us">
+      <a href="#close_window" class="close_window">
+        <img src="img/button_close.png" onclick="click_close_window();"
+             alt="Закрыть окно" style="height:25px;width:25px;"/></a>
+      <img src="img/sm_logo.png" alt="SuperMath Logo" style="width:60%;"/>
+      <p id="about_us_part_1" class="common_text_style about_us_text_style"></p>
+      <p id="about_us_part_2" class="common_text_style about_us_text_style"></p>
+      <p id="about_us_part_3" class="common_text_style about_us_text_style"></p>
+      <p id="about_us_part_4" class="common_text_style about_us_text_style"></p>
+      <p id="about_us_part_5" class="common_text_style about_us_text_style"></p>
+    </div>
+  </div>
+
+  <div id="help" class="window_common_wrapper">
+    <div class="whiteboard_container whiteboard_container_help">
+      <div class="close_window_div">
+        <img src="img/button_close.png" onclick="click_close_window()"/>
+      </div>
+
+      <video width="75%" height="auto" controls preload="none" poster="http://supermath.ru/icons/social-icon_3.png">
+        <source src="video/how_to_supermath.mp4" type="video/mp4">
+        Your browser does not support the video tag
+      </video>
+
+      <h1>Часто задаваемые Вопросы и Ответы<h1>
+      <ul class="help_faq">
+        <li class="question">
+          <img src="img/arrow.png">Для чего нужен SuperMath
+        </li>
+        <li class="answer">
+          SuperMath это бесплатный сайт разработанный для развития и улучшения
+          математических способностей у детей и взрослых. SuperMath обучает
+          сложению, вычитанию, умножению, делению, сравнению, работе с
+          отрицательными и дробными числами. Используйте SuperMath как
+          математические витамины! Предлагайте ребенку регулярно решать задачи
+          в SuperMath всего один раз в день, в течение пяти минут, и вы заметите,
+          насколько быстрее и точнее он станет оперировать цифрами. Скорость и
+          правильность вычислений - это те кирпичики, которыми выкладывается
+          фундамент математического образования вашего ребенка.
+          <br/><br/>
+          Выполняя простые математические упражения с однозначными и
+          двузначными числами, школьники очень хорошо запоминают такие решения
+          не прибегая к вычислениям.
+        </li>
+
+        <li class="question">
+          <img src="img/arrow.png">Регистрация и вход в программу
+        </li>
+        <li class="answer">
+         <h3>Регистрация</h3>Вы можете зарегистрироваться в программе <a href="#registration">по сылке</a>
+         <h3>Вход</h3>Для <a href="#login">входа в систему</a> вам нужно
+          указать email и пароль, который вы указали при регистрации
+         <h3>Забыли пароль</h3>Если вы забыли пароль, вы можете кликнуть по
+          ссылке 'Вспомнить пароль', ввести email адрес, который вы указали при
+          регистрации и нажать кнопку 'выслать новый пароль'
+         <h3>Изменить данные пользователя</h3>Изменить пользовательские данные
+          (email, пароль, имя и т.д.) вы можете в настройках
+        </li>
+
+        <li class="question">
+          <img src="img/arrow.png">Как выбрать программу
+        </li>
+        <li class="answer">
+          После регистрации, вам будет доступно более 30 различных программ.<br/>
+          На главной странице сайта доступны до 7 различных программ.
+        </li>
+
+        <li class="question">
+          <img src="img/arrow.png">Сколько времени в день нужно проводить за программой?
+        </li>
+        <li class="answer">
+         Достаточно, чтобы ваш ребенок ежедневно уделял 5 минут в день с
+         SuperMath.<br/>Это 1825 минут или более 30 часов за год!<br/>Результат не
+         заставит себя ждать и вы увидите - насколько быстрее и точнее он станет
+         оперировать цифрами.
+        </li>
+
+        <li class="question">
+          <img src="img/arrow.png">Технические вопросы
+        </li>
+        <li class="answer">
+         <h3>Минимальные системные требования для работы с SuperMath</h3>
+         Желательно обновить браузер до его последней версии. <b>Javascript и
+         cookies должны быть включены.</b><br/><br/>Минимальные рекомендованные
+         версии браузеров:<br/>
+         <b>Internet Explorer 9<br/>Safari 6<br/>Chrome 19<br/>Firefox 28<br/>
+           Opera 31<br/></b>
+        </li>
+
+        <li class="question">
+          <img src="img/arrow.png">Ответа на мой вопрос в этом разделе нет. Как мне быть?
+        </li>
+        <li class="answer">Вы можете задать свой вопрос по электронной почте.
+          Мы постораемся ответить на него в течении какого-то времени :-)
+        </li>
+      </ul>
+      <script>
+        $(document).ready(function() {
+            // Question handler
+            $('li.question').on('click', function() {
+                // gets next element opens .a of selected question
+                $(this).next().slideToggle('500')
+                // selects all other answers and slides up any open answer
+                .siblings('li.answer').slideUp();
+                // Grab img from clicked question
+                var img = $(this).children('img');
+                // remove Rotate class from all images except the active
+                $('img').not(img).removeClass('help_rotate');
+                // toggle rotate class
+                img.toggleClass('help_rotate');
+            });
+        });
+      </script>
+      </p>
+    </div>
+  </div>
+
+  <!-- 333 -->
+  <div id="login" class="window_common_wrapper">
+    <div class="whiteboard_container">
+      <div class="close_window_div">
+        <img id="login_close_button" src="img/button_close.png" onclick="login_close_window()"/>
+        <img id="login_question_button" src="img/button_question.png" onclick="login_help_message()"/>
+      </div>
+
+      <div class="login_div_img_style">
+        <img id="login_img_id" src="img/registration_mir.png"/>
+      </div>
+
+      <div id="login_id" class="login_div_form_style">
+        <input id="login_user_email" type="email" size="128"
+               class="login_forms_style" placeholder="EMAIL" required autofocus/>
+        <input id="login_user_password" type="password" size="128"
+               class="login_forms_style" required/>
+
+        <div class="login_enter_div">
+          <img id="login_enter_button_img" src="" onclick="login_via_server();"/>
+        </div>
+        <div class="login_enter_div">
+          <img id="login_remind_pswd_button_img" src="" onclick="remind_password()"/>
+        </div>
+      </div>
+
+      <div id="remind_id" class="login_remind_pswd_div_style" style="display:none;">
+        <input id="login_remind_pswd_email" type="email" size="128"
+               class="login_forms_style" placeholder="EMAIL" required autofocus/>
+
+        <div class="login_enter_div">
+          <img id="remind_password_btn_id" src="" onclick="send_password()"/>
+        </div>
+        <div class="login_enter_div">
+          <img id="back_password_btn_id" src="" onclick="back_to_login()"/>
+        </div>
+      </div>
+
+      <div class="login_div_messages">
+        <p id="login_div_messages_help_id" style="display:none;"></p>
+      </div>
+
+      <div class="login_registration_div">
+        <img id="login_registration_button_id" class="login_remind_and_register_img" src="" onclick="back_to_login();show_registration()"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- 444 -->
+  <div id="registration" class="window_common_wrapper">
+    <div class="whiteboard_container">
+      <div class="close_window_div">
+        <img id="registration_close_button" src="img/button_close.png" onclick="registration_close()"/>
+        <img id="registration_question_button" src="img/button_question.png" onclick="registration_help_message()"/>
+      </div>
+
+      <div class="registration_img_div">
+        <img id="registration_image" src="img/registration.png"/>
+        <p id="registration_text" style="display:none;"></p>
+      </div>
+      <div class="registration_img_text_div">
+        <img id="registration_img_text_id" src=""/>
+      </div>
+
+      <input id="new_user_name" type="name" size="64"
+             class="registration_forms_style" required autofocus/>
+      <input id="new_user_surname" type="name" size="64"
+             class="registration_forms_style" required/>
+      <br/>
+      <input id="new_user_email" type="email" size="128"
+             class="registration_forms_style registration_forms_style_email" required/>
+      <br/>
+      <input id="new_user_password" type="password" size="35"
+             class="registration_forms_style" required/>
+      <input id="new_user_password_confirm" type="password" size="35"
+             class="registration_forms_style"required/>
+ 
+      <!-- Google re-captcha lib, initialyzed as part of js script function -->
+      <!--<script id='google_recaptcha_script_id' src='https://www.google.com/recaptcha/api.js?hl=ru'></script>-->
+      <!-- Google re-captcha ui -->
+      <div id="recaptcha_id" class="g-recaptcha registration_recaptcha_styles"
+           data-sitekey="6LcbgQ8UAAAAACfbyWVybr-Gis9npy8WFuPPIvUa"
+           data-theme="dark light">
+      </div>
+
+      <button id="registration_button_id" class="registration_forms_style"
+              type="button" onclick="registration()"></button>
+    </div>
+  </div>
+
+  <!-- 555 -->
+  <div id="game" class="window_common_wrapper">
+    <div class="whiteboard_container">
+      <div class="close_window_div">
+        <img src="img/button_close.png" onclick="game_stop()"/>
+        <img class="close_window_div_help" src="img/button_question.png" onclick="game_help()"/>
+      </div>
+      <div class="stars_wrapper">
+        <div id="statistics" class="statistics_div">
+          <text id="tasks_all" style="color:black;"></text><text style="color:black;">&nbsp;/&nbsp;</text>
+          <text id="tasks_passed" style="color:green;"></text><text style="color:black;">&nbsp;/&nbsp;</text>
+          <text id="tasks_failed" style="color:red;"></text><text style="color:black;">&nbsp;/&nbsp;</text>
+          <text id="tasks_remain" style="color:blue;"></text>
+        </div>
+        <div id="stars" class="stars_div">
+          <img src="img/star.png" alt="star"/>
+          <text id="stars_counter_id"></text>
+        </div>
+      </div>
+      <div class="game_hero_div">
+        <img id="hero_img" src="img/hero_passed_1.png" style="display:none;"/>
+      </div>
+
+      <div id="mo" class="playground" style="display:none;">
+        <div id="mo_task_id" class="mo_task_board">
+          <div class="mo_task mo_task_empty"></div>
+          <div id="mo_number_1" class="mo_task"></div>
+          <div class="mo_task"><text id="mo_operation"></text><text id="mo_number_2"></text></div>
+          <div class="mo_black_line"><!--just black line--></div>
+          <div id="mo_result" class="mo_task"></div>
+        </div>
+        <div class="mo_correct_result_div">
+          <div class="mo_task"></div><div class="mo_task"></div><div class="mo_task"></div>
+          <div class="mo_task">
+            <div id="mo_correct_result" class="mo_correct_result_div_half"></div>
+            <div class="mo_correct_result_div_half">
+              <img id="mo_smile_img_id" src="" style="display:none;"/>
+            </div>
+          </div>
+        </div>
+        <div id="keyboard_wrapper_id" class="keyboard_wrapper" style="display:none;">
+          <div id="keys_wrapper" class="keybord_keys_wrapper">
+            <div class="keybord_key_div"><img id="key_7" src="img/key_7.png"/></div>
+            <div class="keybord_key_div"><img id="key_8" src="img/key_8.png"/></div>
+            <div class="keybord_key_div"><img id="key_9" src="img/key_9.png"/></div>
+            <div class="keybord_key_div"><img id="key_4" src="img/key_4.png"/></div>
+            <div class="keybord_key_div"><img id="key_5" src="img/key_5.png"/></div>
+            <div class="keybord_key_div"><img id="key_6" src="img/key_6.png"/></div>
+            <div class="keybord_key_div"><img id="key_1" src="img/key_1.png"/></div>
+            <div class="keybord_key_div"><img id="key_2" src="img/key_2.png"/></div>
+            <div class="keybord_key_div"><img id="key_3" src="img/key_3.png"/></div>
+            <div class="keybord_key_div"><img id="key_P" src="img/key_0.png" style="visibility:hidden;"/></div>
+            <div class="keybord_key_div"><img id="key_0" src="img/key_0.png"/></div>
+            <div class="keybord_key_div"><img id="key_N" src="img/key_0.png" style="visibility:hidden;"/></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="co" class="playground" style="display:none;">
+        <div class="co_correct_result_div">
+          <p id="co_correct_result"></p>
+          <img id="co_smile_img_id" src="" style="display:none;"/>
+        </div>
+        <div class="co_task_board_wrapper">
+          <div id="co_task_id" class="co_task_board">
+            <text id="co_number_1"></text><text id="co_result"></text><text id="co_number_2"></text>
+          </div>
+        </div>
+
+        <div id="comps_div" class="co_keys_div" style="display:none;">
+          <div class="co_keys_wrapper"><img id="less" src="img/oless.png"/></div>
+          <div class="co_keys_wrapper"><img id="equl" src="img/oequl.png"/></div>
+          <div class="co_keys_wrapper"><img id="more" src="img/omore.png"/></div>
+        </div>
+        <div id="signs_div" class="co_keys_div" style="display:none;">
+          <div id="sign_pls" class="co_keys_wrapper" style="display:none;"><img src="img/opls.png"/></div>
+          <div id="sign_min" class="co_keys_wrapper" style="display:none;"><img src="img/omns.png"/></div>
+          <div id="sign_mul" class="co_keys_wrapper" style="display:none;"><img src="img/omul.png"/></div>
+          <div id="sign_div" class="co_keys_wrapper" style="display:none;"><img src="img/odiv.png"/></div>
+        </div>
+      </div>
+
+      <div class="game_icons_div">
+        <img id="hero_icon" src="img/icon_hero_show.png" onclick="hide_show_hero()"/>
+        <img id="kbrd_icon" src="img/icon_keyboard_show.png" onclick="hide_show_keyboard()"/>
+        <img id="time_icon" src="img/icon_timer_show.png" onclick="hide_show_timer()"/>
+      </div>
+
+      <div id="circles" class="circles_wrapper" style="display:none;">
+        <img id="circle_1" src="img/circle_white.png"/>
+        <img id="circle_2" src="img/circle_white.png"/>
+        <img id="circle_3" src="img/circle_white.png"/>
+        <img id="circle_4" src="img/circle_white.png"/>
+        <img id="circle_5" src="img/circle_white.png"/>
+        <img id="circle_6" src="img/circle_white.png"/>
+        <img id="circle_7" src="img/circle_white.png"/>
+        <img id="circle_8" src="img/circle_white.png"/>
+        <img id="circle_9" src="img/circle_white.png"/>
+        <img id="circle_10" src="img/circle_white.png"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- 666 -->
+  <div id="results" class="window_common_wrapper">
+    <div class="whiteboard_container">
+      <div class="close_window_div">
+        <img src="img/button_close.png" onclick="game_stop()"/>
+      </div>
+
+      <div id="res_msg" class="res_div_msg">
+        <!-- text - you have to registered, link to registration & login -->
+      </div>
+
+      <div id="res_game" class="res_div">
+        <div class="res_div_left">
+          <div id="res_div_text" class="res_div_text_style"></div>
+          <div id="res_div_image" class="res_div_image_style">
+            <img id="res_div_image_id" src="">
+          </div>
+          <table id="res_div_table"></table>
+        </div>
+
+        <div class="res_div_right">
+          <div id="res_stars"></div> <div id="res_tasks"></div>
+          <div id="res_passed"></div> <div id="res_failed"></div>
+        </div>
+
+        <div class="res_div_btns">
+          <img src="img/sm_finish.png" onclick="game_stop()"/>
+          <img src="img/sm_play_more.png" onclick="game_stop('rerun');run_user_game()"/>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="contacts" class="window_common_wrapper">
+    <div class="whiteboard_container whiteboard_container_contacts">
+      <div class="close_window_div">
+        <img src="img/button_close.png" onclick="click_close_window();"/>
+        <!--<img src="img/button_question.png" onclick="alert('Have a question? :-)');"/>-->
+      </div>
+
+      <div style="height:25%;width:100%;">
+        <img src="img/sm_logo.png" alt="SuperMath Logo" style="width:60%;"/>
+      </div>
+
+      <p class="common_text_style" style="width:60%;">
+        Вы можете отправить сообщение по электронной почте, на адрес
+        <a href="mailto:yuri.volokitin@gmail.com?Subject=SuperMath%20question" target="_top">yuri.volokitin@gmail.com</a>
+      </p>
+
+      <p class="common_text_style" style="width:60%;">или заполнить данную форму прямо на сайте:</p>
+      <div style="height:50%;width:100%;">
+        <input id="contacts_user_name" type="name" size="64"
+               class="registration_forms_style"
+               placeholder="Укажите ваше имя" required autofocus/>
+        <br/>
+        <input id="contacts_email" type="name" size="64"
+               class="registration_forms_style"
+               placeholder="Укажите ваш email" required/>
+        <br/>
+        <input id="contacts_message" type="password" size="35"
+               class="registration_forms_style"
+               placeholder="Введите ваше сообщение" required/>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="advertisement" class="window_common_wrapper">
+    <div class="whiteboard_container whiteboard_container_contacts">
+      <div class="close_window_div">
+        <img src="img/button_close.png" onclick="click_close_window();"/>
+        <!--<img src="img/button_question.png" onclick="alert('Have a question? :-)');"/>-->
+      </div>
+
+      <div style="height:25%;width:100%;">
+        <img src="img/sm_logo.png" alt="SuperMath Logo" style="width:60%;"/>
+      </div>
+
+      <p class="common_text_style" style="width:60%;">
+        По всем вопросам размещения рекламы на сайте обращайтесь
+        <a href="mailto:yuri.volokitin@gmail.com?Subject=SuperMath%20реклама" target="_top">yuri.volokitin@gmail.com</a>
+      </p>
+
+      <p class="common_text_style" style="width:60%;">
+        Возможно размещение уже готовых баннеров или изготовление баннеров под
+        рекламное место на сайте. Услуги по изготовлюению рекламных банеров
+        соотвествующих стилистике сайта оплачиваются отдельно.
+      </p>
+
+      <p class="common_text_style" style="width:60%;">
+        Рекламные баннеры <b>ДОЛЖНЫ</b> соотвествовать тематике и стилистике
+        сайта SuperMath. Рекламный блок размещается на один месяц на выбранном
+        месте сайта.
+      </p>
+    </div>
+  </div>
+
+  <div id="top10" class="window_common_wrapper">
+    <div class="whiteboard_container whiteboard_container_top10">
+      <a href="#close_window" class="close_window">
+        <img src="img/button_close.png" onclick="enable_scrolling();click_close_window();"
+             alt="Закрыть окно" style="height:25px;width:25px;"/></a>
+      <img src="img/supermath_top10.png" alt="SuperMath Logo" style="width:60%;margin-top:2%;"/>
+      <div class="top10_table_div">
+        <table id="top10_table_id"></table>
+      </div>
+    </div>
+  </div>
+
+  <div id="belts_descriptions" class="window_common_wrapper">
+    <div class="whiteboard_container whiteboard_container_belts">
+      <div class="close_window_div">
+        <img src="img/button_close.png" onclick="click_close_window();"/>
+      </div>
+
+      <div id="belts_descriptions_title_id" class="belts_descriptions_title"></div>
+
+      <div id="belts_descriptions_div_id" class="belts_descriptions_div">
+        <table id="belts_descriptions_table_id" class="belts_descriptions_table">
+          <tr class="belts_descriptions_table_tr" style="border: 1px solid black;">
+            <td class="belts_descriptions_table_td">
+              <img class="belts_descriptions_table_img" src="img/white.png" alt="White belt"/>
+            </td>
+            <td id="white_belt_description" class="belts_descriptions_table_text"></td>
+          </tr>
+          <tr class="belts_descriptions_table_tr">
+            <td class="belts_descriptions_table_td">
+              <img class="belts_descriptions_table_img" src="img/orange.png" alt="Orange belt"/>
+            </td>
+            <td id="orange_belt_description" class="belts_descriptions_table_text"></td>
+          </tr>
+          <tr class="belts_descriptions_table_tr">
+            <td class="belts_descriptions_table_td">
+              <img class="belts_descriptions_table_img" src="img/blue.png" alt="Blue belt"/>
+            </td>
+            <td id="blue_belt_description" class="belts_descriptions_table_text"></td>
+          </tr>
+          <tr class="belts_descriptions_table_tr">
+            <td class="belts_descriptions_table_td">
+              <img class="belts_descriptions_table_img" src="img/yellow.png" alt="Yellow belt"/>
+            </td>
+            <td id="yellow_belt_description" class="belts_descriptions_table_text"></td>
+          </tr>
+          <tr class="belts_descriptions_table_tr">
+            <td class="belts_descriptions_table_td">
+              <img class="belts_descriptions_table_img" src="img/green.png" alt="Green belt"/>
+            </td>
+            <td id="green_belt_description" class="belts_descriptions_table_text"></td>
+          </tr>
+          <tr class="belts_descriptions_table_tr">
+            <td class="belts_descriptions_table_td">
+              <img class="belts_descriptions_table_img" src="img/brown.png" alt="Brown belt"/>
+            </td>
+            <td id="brown_belt_description" class="belts_descriptions_table_text"></td>
+          </tr>
+          <tr class="belts_descriptions_table_tr">
+            <td class="belts_descriptions_table_td">
+              <img class="belts_descriptions_table_img" src="img/black.png" alt="Black belt"/>
+            </td>
+            <td id="black_belt_description" class="belts_descriptions_table_text"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- скрытая ссылка, показать блок о нас/о программе -->
+  <a id="link_about_us" href="#about_us" style="display:none;"></a>
+  <!-- скрытая ссылка, показать помощь -->
+  <a id="link_help" href="#help" style="display:none;"></a>
+  <!-- скрытая ссылка, если авторизация через cookies не прошла - авторизуемся через сервер -->
+  <a id="show_login" href="#login" style="display:none;"></a>
+  <!-- скрытая ссылка, регистрация -->
+  <a id="link_registration" href="#registration" style="display:none;"></a>
+  <!-- скрытая ссылка, настройки -->
+  <a id="link_settings" href="#settings" style="display:none;"></a>
+  <!-- скрытая ссылка, контакты -->
+  <a id="link_contacts" href="#contacts" style="display:none;"></a>
+  <!-- скрытая ссылка, реклама -->
+  <a id="link_advertisement" href="#advertisement" style="display:none;"></a>
+  <!-- hidden link - show top 10 users -->
+  <a id="link_top10_id" href="#top10" style="display:none;"></a>
+  <!-- скрытая ссылка закрытия окна -->
+  <a id="link_close_window" href="#close_window" style="display:none;"></a>
+  <!-- скрытая ссылка начала игры -->
+  <a id="show_game_screen" href="#game" style="display:none;"></a>
+  <!-- скрытая ссылка результатов игры -->
+  <a id="show_results_id" href="#results" style="display:none;"></a>
+</body>
+</html>
